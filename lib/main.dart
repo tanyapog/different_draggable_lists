@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'material_reorderable_list/base_example.dart';
 
 void main() {
   runApp(
@@ -16,7 +17,23 @@ class DifferentDraggableLists extends StatelessWidget {
       appBar: AppBar(
         title: Text('Different draggable lists'),
       ),
-      body: Center(),
+      body: Center(
+        child: Column(
+          children: [
+            SizedBox(height: 40.0,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                FlatButton(
+                  color: Colors.amber,
+                  onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => BaseExample(),),),
+                  child: Text("Base example"),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
