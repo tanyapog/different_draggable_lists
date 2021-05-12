@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'flutter_reorderable_list/flutter_reorderable_list.dart';
 import 'material_reorderable_list/base_example.dart';
 import 'material_reorderable_list/material_reorderable_list.dart';
 
@@ -37,6 +38,12 @@ class DifferentDraggableLists extends StatelessWidget {
                   child: Text("Base example"),
                 ),
               ],
+            ),
+            SizedBox(height: 10.0,),
+            FlatButton(
+              color: Colors.amber,
+              onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterReorderableList(),),),
+              child: Text("Flutter reorderable list"),
             ),
           ],
         ),
